@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "VTEX - Backup",
+  "description": "Faça backup do seu e-commerce Vtex",
+  "version": "1.3",
+
+  "browser_action": {
+    "default_icon": "lib/img/icon16.png",
+    "default_title": "VTEX | Backup",
+    "default_popup": "popup.html"
+  },
+  "background": {
+     "page": "background.html"
+  },
+  "icons": { 
+    "16": "lib/img/icon16.png",
+    "48": "lib/img/icon48.png",
+    "128": "lib/img/icon128.png" 
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://loja.vtexcommercestable.com.br/admin/a"],
+      "js": ["lib/js/popup.js"]
+    }
+  ],
+  "permissions": [
+      "notifications",
+      "<all_urls>",
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ajax.googleapis.com; object-src 'self'",
+  "web_accessible_resources": ["lib/js/jszip.min.js", "lib/js/jquery.min.js"]
+}

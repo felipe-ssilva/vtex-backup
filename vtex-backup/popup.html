@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="lib/css/modal.css"> -->
+	<link rel="stylesheet" href="lib/css/animate.css">
+	<link rel="stylesheet" href="lib/css/normalize.css">
+	<link rel="stylesheet" href="lib/css/skeleton.css">
+	<link rel="stylesheet" href="lib/css/vtexbkp.css">
+	<link rel="stylesheet" href="lib/css/filedrop.css">
+	<script src="lib/js/popup.js"></script>
+	<link rel="stylesheet" href="lib/css/popup.css">
+	<script src="lib/js/jquery.min.js"></script>
+	<script src="lib/js/jquery.filedrop.js"></script>
+	<script src="lib/js/vtexbkp.js"></script>
+</head>
+<body>
+	 <section class="vtex-bkp">
+            <div class="content">
+            	<header>
+	           	  <hgroup>
+	           	  	<span>bem vindo ao </span>
+	           	  	<h1>vtex backup</h1>
+	           	  </hgroup>
+	           	</header> 
+           	  	<p>O que deseja fazer?</p>   
+           	  	<ul>
+					<li>
+						<input id="chk-img" type="checkbox" />
+						<label for="chk-img" class="label">incluir imagens</label> 
+						<br/> 
+						<p class="message">* recomendável apenas se o número e imagens for menor que 10 mil.</p></li>
+           	  		<!-- <li>Realizar nos meus arquivos online:</li> -->
+           	  		<li class="btn-action"><a id="backup-files" class="button button-primary" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> Backup de arquivos</a></li>
+           	  		<!-- <li>ou</li>
+           	  		<li><a disabled="disabled" class="button button-error" href="#"><i class="fa fa-trash" aria-hidden="true"></i> deletar arquivos</a></li>		 -->
+           	  	</ul>
+
+				<div id="progress-container" class="container" style="display: none;">
+					 <div class="progress">
+						<div class="progress-bar"></div>
+					</div>
+					<p id="bind-status"></p>
+				</div>
+
+				<div id="backup-done" style="display: none;">
+					<h3>backup realizado com sucesso!</h3>
+				</div>
+
+           	  	<hr />
+           	  	<h2 class="upload-related">Realizar upload de um <b>arquivo .zip (Template loja)</b></h2>    
+           	</div>
+
+            <div class="modal-inner upload-related">
+	              <header id="modal-label"><!-- Header --></header>
+	              <div class="modal-content">
+	                 <div class="mainWrapper-drag-and-drop-uploads"><div id="uploads" class="uploads"><div class="dz-message needsclick"><i class="fa fa-cloud-upload fa-3"></i><h1>Upload</h1><b>Arraste o arquivo aqui ou clique para procurar!.</b><br><span class="note needsclick">(em breve)</span></div></div></div>
+	              </div>
+	              <footer><!-- Footer --></footer>
+	        </div>
+
+	        <input type="file" id="upload_button" name="upload_button" style="display: none; width: 0px; height: 0px;">
+     </section>
+
+</body>
+</html>
